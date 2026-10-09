@@ -16,7 +16,11 @@
             "exec": [
               "const response = pm.response.json();",
               "",
-              "pm.collectionVariables.set(\"userID\", response.userID);"
+              "pm.collectionVariables.set(\"userID\", response.userID);",
+              "",
+              "pm.test(\"Status code = 201\", () => {",
+              "    pm.response.to.have.status(201);",
+              "});"
             ],
             "type": "text/javascript",
             "packages": {},
@@ -59,7 +63,11 @@
             "exec": [
               "const response = pm.response.json();",
               "",
-              "pm.collectionVariables.set(\"token\", response.token);"
+              "pm.collectionVariables.set(\"token\", response.token);",
+              "",
+              "pm.test(\"Status code = 200\", () => {",
+              "    pm.response.to.have.status(200);",
+              "});"
             ],
             "type": "text/javascript",
             "packages": {},
@@ -95,6 +103,23 @@
     },
     {
       "name": "3. Confirmar usuário autorizado",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const response = pm.response.json();",
+              "",
+              "pm.test(\"Status code = 200\", () => {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
       "request": {
         "method": "POST",
         "header": [],
@@ -144,7 +169,11 @@
               ");",
               "",
               "pm.collectionVariables.set(\"isbn1\", isbns[0]);",
-              "pm.collectionVariables.set(\"isbn2\", isbns[1]);"
+              "pm.collectionVariables.set(\"isbn2\", isbns[1]);",
+              "",
+              "pm.test(\"Status code = 200\", () => {",
+              "    pm.response.to.have.status(200);",
+              "});"
             ],
             "type": "text/javascript",
             "packages": {},
@@ -183,6 +212,23 @@
     },
     {
       "name": "5. Alugar dois livros de livre escolha",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const response = pm.response.json();",
+              "",
+              "pm.test(\"Status code = 201\", () => {",
+              "    pm.response.to.have.status(201);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
       "request": {
         "auth": {
           "type": "bearer",
@@ -221,6 +267,23 @@
     },
     {
       "name": "6. Listar os detalhes do usuário com os livros escolhidos",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const response = pm.response.json();",
+              "",
+              "pm.test(\"Status code = 200\", () => {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
