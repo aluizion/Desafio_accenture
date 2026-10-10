@@ -60,7 +60,7 @@ describe('Accenture - Teste Nova Janela', function () {
       'A URL da nova janela não é a esperada'
     );
 
-    // 8. Verificar o label/texto
+    
     const label = await driver.wait(
       until.elementLocated(By.id('sampleHeading')),
       10000
@@ -78,10 +78,10 @@ describe('Accenture - Teste Nova Janela', function () {
 
     console.log('6. Fechando a nova janela...');
 
-    // 9. Fechar a nova janela
+    
     await driver.close();
 
-    // 10. Voltar para a janela original
+    
     await driver.switchTo().window(janelaOriginal);
 
     assert.equal(
