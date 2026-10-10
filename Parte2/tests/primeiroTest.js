@@ -82,7 +82,7 @@ describe('Accenture - Teste Form', function () {
     const city = await driver.findElement(By.css('#city input'));
     await city.sendKeys('Delhi', '\uE007'); // Enter
 
-    // Localizar e clicar no botão
+    
     console.log('16. apertar no botao...');
     const button = await driver.findElement(By.id('submit'));
 
@@ -97,7 +97,7 @@ describe('Accenture - Teste Form', function () {
 );
 
 
-    // 17. Validar o título do popup
+    
     console.log('17. Validando o popup...');
 
 
@@ -118,7 +118,7 @@ describe('Accenture - Teste Form', function () {
 
     console.log('Popup validado com sucesso!');
 
-    // 18. Fechar o popup
+    
     console.log('18. Fechando o popup...');
 
     const fecharPopup = await driver.findElement(
@@ -128,9 +128,7 @@ describe('Accenture - Teste Form', function () {
     await fecharPopup.click();
 
     console.log('Popup fechado com sucesso!');
-    // Validar o resultado
-   // const output = await driver.findElement(By.id('output'));
-   // const text = await output.getText();
+   
 
    
   });
