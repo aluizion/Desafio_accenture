@@ -71,7 +71,7 @@ describe('Accenture - Teste Form', function () {
   button
 );
 
-console.log('4. Clica em delete...');
+console.log('12. Clica em delete...');
     await driver.findElement(By.id('delete-record-4')).click();
     
     
